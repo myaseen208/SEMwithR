@@ -171,38 +171,38 @@ shows the influence of latent variables on each other.</p>
 <p>The first component of the structural equations is the latent variable model:</p>
 
 <p><span class="math display">\[\begin{equation}
-\bm{\eta}_{i}=\mathbf{B}\bm{\eta}_{i}+\bm{\Gamma}\bm{\xi}_{i}+\bm{\zeta}_{i}\label{eq:StructuralModel2}
+\eta_{i}=\mathbf{B} \eta_{i}+ \Gamma  \xi_{i}+ \zeta_{i}\label{eq:StructuralModel2}
 \end{equation}\]</span></p>
-<p>In , <span class="math inline">\(\bm{\eta}_{i}\)</span> (eta), the vector
-of latent endogenous random variables, is <span class="math inline">\(m\times1\)</span>; <span class="math inline">\(\bm{\xi}_{i}\)</span>
+<p>In , <span class="math inline">\(\eta_{i}\)</span> (eta), the vector
+of latent endogenous random variables, is <span class="math inline">\(m\times1\)</span>; <span class="math inline">\(\xi_{i}\)</span>
 (xi) the latent exogenous random variables, is <span class="math inline">\(n\times1\)</span>; <span class="math inline">\(\mathbf{B}\)</span>
 is the <span class="math inline">\(m\times m\)</span> coefficient matrix showing the influence of the
-latent endogenous variables on each other; <span class="math inline">\(\bm{\Gamma}\)</span> (Gamma)
-is the <span class="math inline">\(m\times n\)</span> coefficient matrix for the effects of <span class="math inline">\(\bm{\xi}_{i}\)</span>
-on <span class="math inline">\(\bm{\eta}_{i}\)</span>. The matrix <span class="math inline">\(\left(\mathbf{I}-\mathbf{B}\right)\)</span>
-is non-singular. <span class="math inline">\(\bm{\zeta}_{i}\)</span> (zeta) is the disturbance vector
-that is assumed to have an expected value of zero <span class="math inline">\(\left[\mathbb{E}\left(\bm{\zeta}_{i}\right)=\mathbf{0}\right]\)</span>
-and which is uncorrelated with <span class="math inline">\(\bm{\xi}_{i}\)</span>.</p>
+latent endogenous variables on each other; <span class="math inline">\(\Gamma\)</span> (Gamma)
+is the <span class="math inline">\(m\times n\)</span> coefficient matrix for the effects of <span class="math inline">\(\xi_{i}\)</span>
+on <span class="math inline">\(\eta_{i}\)</span>. The matrix <span class="math inline">\(\left(\mathbf{I}-\mathbf{B}\right)\)</span>
+is non-singular. <span class="math inline">\(\zeta_{i}\)</span> (zeta) is the disturbance vector
+that is assumed to have an expected value of zero <span class="math inline">\(\left[\mathbb{E}\left(\zeta_{i}\right)=\mathbf{0}\right]\)</span>
+and which is uncorrelated with <span class="math inline">\(\xi_{i}\)</span>.</p>
 <p>The second component of the general system is the measurement model:</p>
 
 <p><span class="math display">\[\begin{align}
-\mathbf{y}_{i} &amp; =\bm{\Lambda}_{y}\bm{\eta}_{i}+\bm{\epsilon}_{i}\label{eq:MeasurementModel1}\\
-\mathbf{x}_{i} &amp; =\bm{\Lambda}_{x}\bm{\xi}_{i}+\bm{\delta}_{i}\label{eq:MeasurementModel2}
+\mathbf{y}_{i} &amp; =\Lambda_{y} \eta_{i}+\epsilon_{i}\label{eq:MeasurementModel1}\\
+\mathbf{x}_{i} &amp; = \Lambda_{x}\xi_{i}+\delta_{i}\label{eq:MeasurementModel2}
 \end{align}\]</span></p>
 <p>The <span class="math inline">\(\mathbf{y}_{i}\)</span> <span class="math inline">\(\left(p\times1\right)\)</span> and the <span class="math inline">\(\mathbf{x}_{i}\)</span>
-<span class="math inline">\(\left(q\times1\right)\)</span> vectors are observed variables, <span class="math inline">\(\bm{\Lambda}_{y}\)</span>
-<span class="math inline">\(\left(p\times m\right)\)</span> (Lambda) and <span class="math inline">\(\bm{\Lambda}_{x}\)</span> <span class="math inline">\(\left(q\times n\right)\)</span>
+<span class="math inline">\(\left(q\times1\right)\)</span> vectors are observed variables, <span class="math inline">\(\Lambda_{y}\)</span>
+<span class="math inline">\(\left(p\times m\right)\)</span> (Lambda) and <span class="math inline">\(\Lambda_{x}\)</span> <span class="math inline">\(\left(q\times n\right)\)</span>
 are the coefficient matrices that show the relation of <span class="math inline">\(\mathbf{y}_{i}\)</span>
-to <span class="math inline">\(\bm{\eta}_{i}\)</span> and <span class="math inline">\(\mathbf{x}_{i}\)</span> to <span class="math inline">\(\bm{\xi}_{i}\)</span> respectively,
-and <span class="math inline">\(\bm{\epsilon}_{i}\)</span> <span class="math inline">\(\left(p\times1\right)\)</span> (epsilon) and <span class="math inline">\(\bm{\delta}_{i}\)</span>
+to <span class="math inline">\(\eta_{i}\)</span> and <span class="math inline">\(\mathbf{x}_{i}\)</span> to <span class="math inline">\(\xi_{i}\)</span> respectively,
+and <span class="math inline">\(\epsilon_{i}\)</span> <span class="math inline">\(\left(p\times1\right)\)</span> (epsilon) and <span class="math inline">\(\delta_{i}\)</span>
 <span class="math inline">\(\left(q\times1\right)\)</span> (delta) are the errors of measurement for
 <span class="math inline">\(\mathbf{y}_{i}\)</span> and <span class="math inline">\(\mathbf{x}_{i}\)</span>, respectively. The errors
-of measurement are assumed to be uncorrelated with <span class="math inline">\(\bm{\eta}_{i}\)</span>,
-<span class="math inline">\(\bm{\xi}_{i}\)</span> and <span class="math inline">\(\bm{\zeta}_{i}\)</span> and with each other.</p>
-<p>Also <span class="math inline">\(\mathbb{V}\left(\bm{\xi}_{i}\right)=\bm{\Phi}\)</span> (Phi), <span class="math inline">\(\mathbb{V}\left(\bm{\zeta}_{i}\right)=\bm{\Psi}\)</span>
-(Psi), <span class="math inline">\(\mathbb{V}\left(\bm{\epsilon}_{i}\right)=\bm{\Theta}_{\epsilon}\)</span>
-(Theta), <span class="math inline">\(\mathbb{V}\left(\bm{\delta}_{i}\right)=\bm{\Theta}_{\delta}\)</span>
-(Theta) and <span class="math inline">\(\mathbb{V}\left(\begin{bmatrix}\mathbf{y}_{i}\\ \mathbf{x}_{i} \end{bmatrix}\right)=\bm{\Sigma}\)</span> (Sigma).</p>
+of measurement are assumed to be uncorrelated with <span class="math inline">\(\eta_{i}\)</span>,
+<span class="math inline">\(\xi_{i}\)</span> and <span class="math inline">\(\zeta_{i}\)</span> and with each other.</p>
+<p>Also <span class="math inline">\(\mathbb{V}\left(\xi_{i}\right)=\Phi\)</span> (Phi), <span class="math inline">\(\mathbb{V}\left(\zeta_{i}\right)=\Psi\)</span>
+(Psi), <span class="math inline">\(\mathbb{V}\left(\epsilon_{i}\right)=\Theta_{\epsilon}\)</span>
+(Theta), <span class="math inline">\(\mathbb{V}\left(\delta_{i}\right)=\Theta_{\delta}\)</span>
+(Theta) and <span class="math inline">\(\mathbb{V}\left(\begin{bmatrix}\mathbf{y}_{i}\\ \mathbf{x}_{i} \end{bmatrix}\right)=\Sigma\)</span> (Sigma).</p>
 <div class="figure" style="text-align: center"><span id="fig:Warren8V1"></span>
 <img src="images/Warren8V1.png" alt="Path Diagram for job performance of farm managers" width="80%" />
 <p class="caption">
